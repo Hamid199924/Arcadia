@@ -38,7 +38,7 @@ include './tamplate/header.php';
               entrez dans le royaume secret des bouquetins et des chamois,
                véritables maîtres de l’escalade sur les parois escarpées.
               <br />
-              
+
               Plongez dans l’atmosphère envoûtante du désert, où le cobra royal trône en souverain solitaire.
                Admirez la résistance exemplaire des dromadaires, véritables symboles de l’adaptation aux conditions extrêmes,
                 et laissez-vous captiver par le regard vif du fennec, la rapidité de la vipère du désert, 
@@ -54,7 +54,7 @@ include './tamplate/header.php';
       </div>
       <div class="col-lg-6">
         <div class="image-container">
-          <img id="main-image" src="/assets/jungle/tigre.jpg" alt="Tigre" class="img-fluid" />
+          <img id="main-image" src="./assets/jungle/tigre.jpg" alt="Tigre" class="img-fluid" />
         </div>
       </div>
     </div>
@@ -71,7 +71,7 @@ include './tamplate/header.php';
       <div class="col-lg-4">
         <div class="rectangle">
           <img
-            src="/assets/savane/savannah-lion.jpg"
+            src="./assets/savane/savannah-lion.jpg"
             alt="Image 1"
             class="image img-fluid"
           />
@@ -80,9 +80,9 @@ include './tamplate/header.php';
               Rencontrez le roi de la savane - le lion. Découvrez sa majesté
               et sa puissance
             </p>
-            <a href="/savane.php#lion"
+            <a href="./savane.php#lion"
               >En savoir plus...<img
-                src="/assets/logo/iconeLien.png"
+                src="./assets/logo/iconeLien.png"
                 alt="Logo En Savoir Plus"
             /></a>
           </div>
@@ -91,7 +91,7 @@ include './tamplate/header.php';
       <div class="col-lg-4">
         <div class="rectangle">
           <img
-            src="/assets/marais/crocodilenil.jpg"
+            src="./assets/marais/crocodilenil.jpg"
             alt="Image 2"
             class="image img-fluid"
           />
@@ -99,7 +99,7 @@ include './tamplate/header.php';
             <p>Explorez le monde mystérieux des crocodiles des marais</p>
             <a href="/marais.php#croco"
               >En savoir plus...<img
-                src="/assets/logo/iconeLien.png"
+                src="./assets/logo/iconeLien.png"
                 alt="Logo En Savoir Plus"
             /></a>
           </div>
@@ -108,7 +108,7 @@ include './tamplate/header.php';
       <div class="col-lg-4">
         <div class="rectangle">
           <img
-            src="<php echo ?>/assets/montagne/loup.jpg"
+            src="./assets/montagne/loup.jpg"
             alt="Image 3"
             class="image img-fluid"
           />
@@ -116,9 +116,9 @@ include './tamplate/header.php';
             <p>
               Plongez dans l'essence majestueuse du loup gris, maître des forêts sauvages
             </p>
-            <a href="/mountain.php#loup"
+            <a href="./mountain.php#loup"
               >En savoir plus...<img
-                src="/assets/logo/iconeLien.png"
+                src="./assets/logo/iconeLien.png"
                 alt="Logo En Savoir Plus"
             /></a>
           </div>
