@@ -1,11 +1,11 @@
 <?php
  // Inclure le fichier de connexion à la base de données
-include_once "config/conneion_bdd.php";
+include_once "config/database.php";
 
 
 
  //Sélectionne les avis validés
-include './tamplate/header.php';
+include './template/header.php';
 
 ?>
 
@@ -149,6 +149,6 @@ include './tamplate/header.php';
     </div>
   </div>
      
-  <?php include './tamplate/footer.php'; ?>
+  <?php include './template/footer.php'; ?>
 
 
