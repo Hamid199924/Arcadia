@@ -1,0 +1,119 @@
+/* Style général de la page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* En-tête */
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2em;
+    font-weight: 700;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.1em;
+    margin: 5px 0;
+}
+
+header .logout {
+    margin-top: 10px;
+}
+
+/* Sections */
+section h2 {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+/* Messages et Avis */
+.message-item, .avis-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.message-item p, .avis-item p {
+    font-size: 0.95em;
+    margin-bottom: 10px;
+}
+
+.message-item .btn, .avis-item .btn {
+    margin-top: 10px;
+}
+
+/* Table Animaux */
+.animal-section table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.animal-section th, .animal-section td {
+    padding: 12px;
+    text-align: center;
+}
+
+.animal-section th {
+    background-color: #007bff;
+    color: white;
+    font-weight: 600;
+}
+
+.animal-section td {
+    background-color: #ffffff;
+}
+
+.animal-section tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Table Services */
+.service-section table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.service-section th, .service-section td {
+    padding: 12px;
+    text-align: center;
+}
+
+.service-section th {
+    background-color: #28a745;
+    color: white;
+    font-weight: 600;
+}
+
+.service-section td {
+    background-color: #ffffff;
+}
+
+.service-section tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Boutons */
+.btn-success, .btn-danger, .btn-primary, .btn-warning {
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+}
+
+.btn-success:hover, .btn-danger:hover, .btn-primary:hover, .btn-warning:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
