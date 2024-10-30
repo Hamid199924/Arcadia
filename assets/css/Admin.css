@@ -1,255 +1,221 @@
- /* Variables globales */
+/* Variables globales */
 :root {
-  --primary-bg: rgba(255, 255, 255, 0.8);
-  --primary-color: #5cb85c;
-  --hover-primary: orange;
-  --danger-color: #d9534f;
-  --hover-danger: #c9302c;
-  --info-color: #5bc0de;
-  --hover-info: #31b0d5;
-  --edit-color: #f39c12;
-  --hover-edit: #e67e22;
-  --text-color: #333;
-  --light-bg: #eaf0f1;
-  --border-color: #b0b0b0;
-}
+    --primary-bg: rgba(255, 255, 255, 0.8);
+    --primary-color: #5cb85c;
+    --hover-primary: orange;
+    --danger-color: #d9534f;
+    --hover-danger: #c9302c;
+    --info-color: #5bc0de;
+    --hover-info: #31b0d5;
+    --edit-color: #f39c12;
+    --hover-edit: #e67e22;
+    --text-color: #333;
+    --light-bg: #eaf0f1;
+    --border-color: #b0b0b0;
+  }
 
-/* Styles généraux */
+  /* Styles généraux */
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: url("/fondecran/fondEcranFooter.jpg") no-repeat center center fixed;
-  background-size: cover;
-  color: black;
-}
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url("/fondecran/fondEcranFooter.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: black;
+  }
+  header {
+    background-color: var(--primary-bg);
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    margin-top: 20px;
+  }
+  h1, h2 {
+    color: var(--text-color);
+    text-align: center;
+  }
 
-header {
-  background-color: var(--primary-bg);
-  padding: 20px;
-  text-align: center;
-  border-radius: 15px;
-  margin-top: 20px;
-}
-
-h1, h2 {
-  color: var(--text-color);
-  text-align: center;
-}
-
-.container {
-  background-color: var(--primary-bg);
-  border-radius: 20px;
-  padding: 20px;
-  margin-bottom: 30px;
-}
-
-/* Styles des items */
-.animal-item {
-  background-color: var(--light-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 10px;
-  padding: 15px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Text color */
-h2, th, td {
-  color: black;
-}
-
-p, label {
-  color: var(--text-color);
-}
-
-/* Boutons avec transitions */
-button, .btn {
-  background-color: var(--primary-color);
-  color: white;
-  padding: 8px 12px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: background-color 0.3s ease;
-}
-
-button:hover, .btn:hover {
-  background-color: var(--hover-primary);
-}
-
-button.delete, .btn-danger {
-  background-color: var(--danger-color);
-}
-
-button.delete:hover, .btn-danger:hover {
-  background-color: var(--hover-danger);
-}
-
-button.info, .btn-info {
-  background-color: var(--info-color);
-}
-
-button.info:hover, .btn-info:hover {
-  background-color: var(--hover-info);
-}
-
-button.edit {
-  background-color: var(--edit-color);
-}
-
-button.edit:hover {
-  background-color: var(--hover-edit);
-}
-
-/* Styles pour les tableaux */
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th, td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
-}
-
-th {
-  background-color: #f2f2f2;
-}
-
-td input, td button {
-  width: 100%;
-}
-
-table td input[type="text"], table td input[type="number"], table td input[type="datetime-local"] {
-  border: 1px solid #ccc;
-  padding: 6px;
-  border-radius: 5px;
-}
-
-table td button {
-  background-color: #2980b9;
-  color: white;
-  transition: background-color 0.3s ease;
-}
-
-table td button:hover {
-  background-color: #3498db;
-}
-
-/* Section des services */
-.service-section {
-  background-color: #f8f9fa;
-  padding: 20px;
-  border-radius: 8px;
-}
-
-.service-section h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #343a40;
-}
-
-.service-section .table {
-  background-color: #ffffff;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.service-section .table thead th {
-  background-color: var(--secondary-color);
-  color: #ffffff;
-}
-
-.service-section .table tbody tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-.service-section .table tbody td {
-  vertical-align: middle;
-}
-
-.service-section .btn-warning {
-  margin-right: 5px;
-}
-
-/* Lien de déconnexion */
-.logout {
-  display: inline-block;
-  margin-top: 10px;
-  color: white;
-  background-color: var(--danger-color);
-  padding: 8px 16px;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.logout:hover {
-  background-color: var(--hover-danger);
-}
-
-/* Lien futuriste */
-.futuristic-link {
-  display: inline-block;
-  padding: 15px 30px;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #fff;
-  background: linear-gradient(45deg, #ff416c, #ff4b2b);
-  border-radius: 50px;
-  box-shadow: 0 0 20px rgba(255, 65, 108, 0.8), 0 0 40px rgba(255, 75, 43, 0.6);
-  text-decoration: none;
-  transition: all 0.4s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.futuristic-link:hover {
-  transform: scale(1.1);
-  background: linear-gradient(45deg, #ff4b2b, #ff416c);
-  box-shadow: 0 0 40px rgba(255, 65, 108, 1), 0 0 80px rgba(255, 75, 43, 0.8);
-}
-
-.futuristic-link::before {
-  content: "";
-  position: absolute;
-  top: -100%;
-  left: -100%;
-  width: 200%;
-  height: 200%;
-  background: rgba(255, 255, 255, 0.2);
-  transform: rotate(45deg);
-  transition: all 0.6s ease;
-}
-
-.futuristic-link:hover::before {
-  top: 0;
-  left: 0;
-}
-
-/* Adaptations pour rendre responsive */
-@media (max-width: 768px) {
   .container {
-    padding: 10px;
+    background-color: var(--primary-bg);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 30px;
   }
-
+  /* Styles des items */
   .animal-item {
-    margin-bottom: 15px;
+    background-color: var(--light-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  /* Text color */
+  h2, th, td {
+    color: black;
+  }
+  p, label {
+    color: var(--text-color);
   }
 
+  /* Boutons avec transitions */
+button, .btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  button:hover, .btn:hover {
+    background-color: var(--hover-primary);
+  }
+  button.delete, .btn-danger {
+    background-color: var(--danger-color);
+  }
+  button.delete:hover, .btn-danger:hover {
+    background-color: var(--hover-danger);
+  }
+  button.info, .btn-info {
+    background-color: var(--info-color);
+  }
+  button.info:hover, .btn-info:hover {
+    background-color: var(--hover-info);
+  }
+  button.edit {
+    background-color: var(--edit-color);
+  }
+  button.edit:hover {
+    background-color: var(--hover-edit);
+  }
+  /* Styles pour les tableaux */
   table {
-    font-size: 14px;
+    width: 100%;
+    border-collapse: collapse;
   }
-
   th, td {
-    font-size: 10px;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+  td input, td button {
+    width: 100%;
+  }
+  table td input[type="text"], table td input[type="number"], table td input[type="datetime-local"] {
+    border: 1px solid #ccc;
     padding: 6px;
+    border-radius: 5px;
   }
-
-  input[type="text"], input[type="number"], input[type="datetime-local"] {
-    font-size: 10px;
-    min-width: 80px;
+  table td button {
+    background-color: #2980b9;
+    color: white;
+    transition: background-color 0.3s ease;
   }
+  table td button:hover {
+    background-color: #3498db;
+  }
+  /* Section des services */
+  .service-section {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  .service-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #343a40;
+  }
+  .service-section .table {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .service-section .table thead th {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+  }
+  .service-section .table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  .service-section .table tbody td {
+    vertical-align: middle;
+  }
+  .service-section .btn-warning {
+    margin-right: 5px;
+  }
+  /* Lien de déconnexion */
+  .logout {
+    display: inline-block;
+    margin-top: 10px;
+    color: white;
+    background-color: var(--danger-color);
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  .logout:hover {
+    background-color: var(--hover-danger);
+  }
+  /* Lien futuriste */
+  .futuristic-link {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(255, 65, 108, 0.8), 0 0 40px rgba(255, 75, 43, 0.6);
+    text-decoration: none;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .futuristic-link:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+    box-shadow: 0 0 40px rgba(255, 65, 108, 1), 0 0 80px rgba(255, 75, 43, 0.8);
+  }
+  .futuristic-link::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(45deg);
+    transition: all 0.6s ease;
+  }
+  .futuristic-link:hover::before {
+    top: 0;
+    left: 0;
+  }
+  /* Adaptations pour rendre responsive */
+  @media (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+    .animal-item {
+      margin-bottom: 15px;
+    }
+    table {
+      font-size: 14px;
+    }
+    th, td {
+      font-size: 10px;
+      padding: 6px;
+    }
+    input[type="text"], input[type="number"], input[type="datetime-local"] {
+      font-size: 10px;
+      min-width: 80px;
+    }
+    button, .btn {
+      padding: 6px 10px;
+    }
 }

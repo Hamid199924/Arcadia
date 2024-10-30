@@ -1,840 +1,840 @@
 /* Styles globaux */
 
 *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body{
-  font-family: "ROBOTO", sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-  line-height: 1,6;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-ul {
-  list-style: none;
-}
-
-/* Background Image */
-.background-image {
-  background: url('../../fondecran/iStock-1455862033.jpg') no-repeat center center/cover;
-  height: 300px;
-  position: relative;
-}
-
-/* Container principal */
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-}
-
-/* Navigation */
-.header-nav ul {
-  display: flex;
-  gap: 20px;
-}
-
-.header-nav ul li {
-  position: relative;
-}
-
-.header-nav ul li a {
-  padding: 10px 15px;
-  background-color: #54331e;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.header-nav ul li a:hover,
-.header-nav ul li.active a {
-  background-color: #3498db;
-  color: #f4f4f4;
-}
-
-/* Logo */
-.logo img {
-  width: 150px;
-  height: auto;
-  transition: transform 0.3s ease;
-}
-
-.logo img:hover {
-  transform: scale(1.1); /* Zoom au survol */
-}
-
-
-/* Principale */
-.background-section {
-  background-image: url("../../fondecran/fondPrincipal.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
-.presentation-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.text-container {
-  width: 700px;
-  text-align: center;
-}
-
-.text-container h1 {
-  font-family: "Roboto", sans-serif;
-  font-size: 48px;
-  color: #197c2f;
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
-
-.text-container p {
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  font-weight: bold;
-  color: black;
-}
-
-.image-container {
-  margin-top: 100px;
-}
-
-/* Section centrale */
-.centered-section {
-  text-align: center;
-  margin-top: 100px;
-}
-
-.centered-section h2 {
-  font-family: "Roboto", sans-serif;
-  font-size: 24px;
-  color: #54331e;
-}
-
-.centered-section p {
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
-  color: #54331e;
-}
-
-
-/* 3container */
-.container {
-  text-align: center;
-}
-
-.rectangle {
-  display: inline-block;
-  margin: 20px;
-  position: relative;
-}
-
-/* Style pour les images dans les cartes */
-.rectangle img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.rectangle img:hover {
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  transform: scale(1.05); /* Effet zoom au survol */
-}
-
-/* Styles pour toutes les images */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.description-contain {
-  bottom: -152px;
-  left: 0;
-  width: 350px;
-  height: 150px;
-  background-color: rgba(255, 255, 255, 0.7);
-  padding: 10px;
-  border: 2px solid black;
-  border-top: none;
-}
-
-.description-contain p {
-  text-align: center;
-  margin-bottom: 0;
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  color: #54331e;
-}
-
-.description-contain a {
-  display: block;
-  text-align: right;
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
-  color: #197c2f;
-  text-decoration: none;
-}
-
-.description-contain img {
-  width: 25px;
-  height: 25px;
-}
-
-/*  form */
-.transparent-rectangle {
-  background-color: rgba(255, 255, 255, 0.5);
-  height: auto;
-  padding: 20px;
-  border-radius: 10px;
-  margin-top: 50px;
-}
-
-h3 {
-  font-size: 32px;
-  text-align: left;
-  margin-bottom: 20px;
-}
-
-#pseudo,
-#email {
-  max-width: 400px;
-}
-.form-group {
-  max-width: 700px;
-  margin-bottom: 20px;
-}
-
-/* CommentsSpace */
-.comment-info h4,
-.comment-content h4 {
-  margin-top: 0;
-}
-
-.comment-content {
-  background-color: #f4f4f4;
-  padding: 20px;
-  border-radius: 10px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-/* Footer */
-.custom-footer {
-  background-image: url("../../fondecran/fondEcranFooter.jpg");
-  background-size: cover;
-  background-position: center;
-  padding: 50px 0;
-}
-
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.footer-title {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.conatct-button {
-  padding: 10px 20px;
-  background-color: #54331e;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.conatct-button{
-  margin-top: 15px;
-}
-
-/* Styles pour les icônes */
-.sosial-icons {
-  padding: 20px 0;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  text-align: center;
-}
-
-.social-icons {
-  display: flex;
-  justify-content: center;
-  justify-content: space-around;
-  justify-content: center; 
-  gap: 15px; 
-}
-
-.social-icon {
-  width: 34px; 
-  height: auto; 
-  transition: transform 0.3s ease; 
-}
-
-.social-icon:hover {
-  transform: scale(1.2); 
-}
-
-/* Pour adapter le footer sur les petits écrans */
-@media screen and (max-width: 768px) {
-    .footer {
-        padding: 15px 0;
-    }
-    .footer-container {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .footer-title {
-        font-size: 18px;
-    }
-.social-icon {
-        
-       
-width: 25px; /* Réduction de la taille des icônes sur mobile */
-    }
-}
-
-    
-.footer-title {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #fff;
-}
-
-/* Style du conteneur de la section footer */
-.footer {
-  background-color: #000000;
-  color: #fff;
-  padding: 20px 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
-
-/* Style du titre */
-.footer-title {
-  display: block;
-  margin-bottom: 10px;
-  font-size: 24px;
-  margin-bottom: 15px;
-  color: #fff;
-}
- 
-.custom-list {
-  padding-left: 0;
-  list-style: none;
-  margin-bottom: 0;
-}
-
-.custom-list li {
-  margin-bottom: 10px;
-  padding: 5px;
-}
-
-/* Style pour les liens */
-.custom-list li a {
-  font-size: 16px;
-  color: #fff; 
-  text-decoration: none; 
-  display: block; 
-  transition: color 0.3s ease, padding-left 0.3s ease; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
-.custom-list li a:hover {
-  color: #4caf50; 
-  padding-left: 5px; 
-}
-
-/* Style général du conteneur du formulaire */
-.screen {
-  background-color: #f8f9fa;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 600px;
-  margin: 30px auto;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Style du titre du formulaire */
-.title-form {
-  font-size: 24px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-/* Style pour les groupes de formulaires */
-.form-group {
-  margin-bottom: 20px;
-}
-
-/* Style pour les labels */
-.form-label {
-  font-size: 14px;
-  font-weight: 600;
-  color: #555;
-  margin-bottom: 5px;
-  display: block;
-}
-
-/* Style pour le bouton d'envoi */
-.form-button {
-  background-color: #007bff;
-  color: #ddd;
-  border: none;
-  padding: 10px 30px;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-/* Effet au survol pour le bouton */
-.form-button:hover {
-  background-color: #0056b3;
-}
-
-/* Centrage du bouton */
-.text-center {
-  text-align: center;
-}
-
-.service-container {
-  padding: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.service-nav {
-  background-color: #dae8e1;
-  max-height: 500px;
-  max-width: 250px;
-}
-
-.service-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.service-nav ul li {
-  padding: 20px;
-  font-size: 32px;
-  font-family: "Inika", serif;
-}
-
-.service-nav ul li a {
-  color: #54331e;
-  text-decoration: none;
-}
-
-.service-nav ul li a:hover {
-  text-decoration: underline;
-}
-
-.content {
-  text-align: center;
-}
-
-.service-title {
-  font-size: 50px;
-  color: #54331e;
-  font-family: "Zen Tokyo Zoo", sans-serif;
-  margin-top: 30px;
-}
-
-.intro {
-  font-size: 20px;
-  color: #54331e;
-  line-height: 1.5;
-  font-family: "Roboto", sans-serif;
-  margin-top: 50px;
-}
-
-/*.Section services.*/
-
-.section-services {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin-top: 50px;
-}
-
-.service1,
-.service2,
-.service3,
-.service4,
-.service5,
-.service6 {
-  display: flex;
-  align-items: center;
-  margin-bottom: 50px;
-}
-
-.description,
-.service {
-  margin-left: 20px;
-}
-
-.service img {
-  max-width: 600px;
-  max-height: 300px;
-  border-radius: 10px;
-}
-
-.description {
-  width: 600px;
-  height: auto;
-  background-color: rgba(0, 0, 0, 0.25);
-  padding: 10px;
-  color: white;
-  text-align: center;
-}
-
-.serv-title {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.description p {
-  font-size: 16px;
-}
-
-.serv-title,
-.description p {
-  color: white;
-  font-family: "Roboto", sans-serif;
-}
-
-/*Animals*/
-
-.background-section-desert {
-  background-image: url("../../assets/desert/desert.jpg");
-}
-
-.background-section-jungle {
-  background-image: url("../../assets/jungle/jungle.jpg");
-}
-
-.background-section-mountain {
-  background-image: url("../../assets/montagne/montagne.jpg");
-}
-
-.background-section-marais {
-  background-image: url("../../assets/marais/marais.jpg");
-}
-
-.background-section-savane {
-  background-image: url("../../assets/savane/savane.jpg");
-}
-
-.background-section-desert,
-.background-section-jungle,
-.background-section-mountain,
-.background-section-marais,
-.background-section-savane {
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
-.animals-title {
-  font-size: 50px;
-  color: white;
-  font-family: "Zen Tokyo Zoo", sans-serif;
-  margin-top: 30px;
-}
-
-.intro-animals {
-  font-size: 20px;
-  color: white;
-  line-height: 1.5;
-  font-family: "Roboto", sans-serif;
-  margin-top: 50px;
-}
-.animals-intro {
-  background-color: rgba(0, 0, 0, 0.25);
-}
-
-/* Conteneur du bouton "J'aime" */
-.like-button-container {
-  text-align: right;
-  margin-top: 10px;
-}
-
-/* Style du bouton "J'aime" */
-button.jaime-btn {
-  background: transparent;
-  border: none;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-button.jaime-btn:hover {
-  transform: scale(1.1);
-}
-
-/* Container principal */
-.background-section-savane {
-  background-color: #f5f5f5;
-  padding: 40px 20px;
-}
-
-.service-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  border-radius: 10px;
-  background-color: #fff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-}
-
-/* Menu de navigation */
-.service-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.service-nav ul li {
-  padding: 10px 0;
-  font-weight: bold;
-}
-
-.service-nav ul li a {
-  color: #444;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.service-nav ul li.active a,
-.service-nav ul li a:hover {
-    color: #2a9d8f;
-}
-
-.service-nav {
-    border-right: 1px solid #ddd;
-}
-
-/* Section des animaux */
-.animals-intro {
+  
+  body{
+    font-family: "ROBOTO", sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1,6;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  /* Background Image */
+  .background-image {
+    background: url('../../fondecran/iStock-1455862033.jpg') no-repeat center center/cover;
+    height: 300px;
+    position: relative;
+  }
+  
+  /* Container principal */
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
-    background-color: #fafafa;
-    border-radius: 8px;
-}
-
-.animals-title {
-    font-size: 2em;
-    color: #2a9d8f;
+  }
+  
+  /* Navigation */
+  .header-nav ul {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .header-nav ul li {
+    position: relative;
+  }
+  
+  .header-nav ul li a {
+    padding: 10px 15px;
+    background-color: #54331e;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .header-nav ul li a:hover,
+  .header-nav ul li.active a {
+    background-color: #3498db;
+    color: #f4f4f4;
+  }
+  
+  /* Logo */
+  .logo img {
+    width: 150px;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .logo img:hover {
+    transform: scale(1.1); /* Zoom au survol */
+  }
+  
+  
+  /* Principale */
+  .background-section {
+    background-image: url("../../fondecran/fondPrincipal.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  
+  .presentation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .text-container {
+    width: 700px;
+    text-align: center;
+  }
+  
+  .text-container h1 {
+    font-family: "Roboto", sans-serif;
+    font-size: 48px;
+    color: #197c2f;
     margin-bottom: 20px;
-}
-
-.intro-animals {
-    font-size: 1.1em;
-    color: #666;
-    line-height: 1.6;
-}
-/* Style des cartes d'animaux */
-.section-services .service1,
-.section-services .service2,
-.section-services .service3,
-.section-services .service4,
-.section-services .service5,
-.section-services .service6 {
+    margin-top: 20px;
+  }
+  
+  .text-container p {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .image-container {
+    margin-top: 100px;
+  }
+  
+  /* Section centrale */
+  .centered-section {
+    text-align: center;
+    margin-top: 100px;
+  }
+  
+  .centered-section h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    color: #54331e;
+  }
+  
+  .centered-section p {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    color: #54331e;
+  }
+  
+  
+  /* 3container */
+  .container {
+    text-align: center;
+  }
+  
+  .rectangle {
+    display: inline-block;
+    margin: 20px;
+    position: relative;
+  }
+  
+  /* Style pour les images dans les cartes */
+  .rectangle img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  
+  .rectangle img:hover {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05); /* Effet zoom au survol */
+  }
+  
+  /* Styles pour toutes les images */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .description-contain {
+    bottom: -152px;
+    left: 0;
+    width: 350px;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border: 2px solid black;
+    border-top: none;
+  }
+  
+  .description-contain p {
+    text-align: center;
+    margin-bottom: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    color: #54331e;
+  }
+  
+  .description-contain a {
+    display: block;
+    text-align: right;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: #197c2f;
+    text-decoration: none;
+  }
+  
+  .description-contain img {
+    width: 25px;
+    height: 25px;
+  }
+  
+  /*  form */
+  .transparent-rectangle {
+    background-color: rgba(255, 255, 255, 0.5);
+    height: auto;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 50px;
+  }
+  
+  h3 {
+    font-size: 32px;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  #pseudo,
+  #email {
+    max-width: 400px;
+  }
+  .form-group {
+    max-width: 700px;
+    margin-bottom: 20px;
+  }
+  
+  /* CommentsSpace */
+  .comment-info h4,
+  .comment-content h4 {
+    margin-top: 0;
+  }
+  
+  .comment-content {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Footer */
+  .custom-footer {
+    background-image: url("../../fondecran/fondEcranFooter.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .conatct-button {
+    padding: 10px 20px;
+    background-color: #54331e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .conatct-button{
+    margin-top: 15px;
+  }
+  
+  /* Styles pour les icônes */
+  .sosial-icons {
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    justify-content: center; 
+    gap: 15px; 
+  }
+  
+  .social-icon {
+    width: 34px; 
+    height: auto; 
+    transition: transform 0.3s ease; 
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.2); 
+  }
+  
+  /* Pour adapter le footer sur les petits écrans */
+  @media screen and (max-width: 768px) {
+      .footer {
+          padding: 15px 0;
+      }
+      .footer-container {
+          flex-direction: column;
+          gap: 20px;
+      }
+  
+      .footer-title {
+          font-size: 18px;
+      }
+  .social-icon {
+          
+         
+  width: 25px; /* Réduction de la taille des icônes sur mobile */
+      }
+  }
+  
+      
+  .footer-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  /* Style du conteneur de la section footer */
+  .footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 20px 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  /* Style du titre */
+  .footer-title {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #fff;
+  }
+   
+  .custom-list {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 0;
+  }
+  
+  .custom-list li {
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+  
+  /* Style pour les liens */
+  .custom-list li a {
+    font-size: 16px;
+    color: #fff; 
+    text-decoration: none; 
+    display: block; 
+    transition: color 0.3s ease, padding-left 0.3s ease; 
+    }
+  .custom-list li a:hover {
+    color: #4caf50; 
+    padding-left: 5px; 
+  }
+  
+  /* Style général du conteneur du formulaire */
+  .screen {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 30px auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style du titre du formulaire */
+  .title-form {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Style pour les groupes de formulaires */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Style pour les labels */
+  .form-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  /* Style pour le bouton d'envoi */
+  .form-button {
+    background-color: #007bff;
+    color: #ddd;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Effet au survol pour le bouton */
+  .form-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Centrage du bouton */
+  .text-center {
+    text-align: center;
+  }
+  
+  .service-container {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .service-nav {
+    background-color: #dae8e1;
+    max-height: 500px;
+    max-width: 250px;
+  }
+  
+  .service-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .service-nav ul li {
+    padding: 20px;
+    font-size: 32px;
+    font-family: "Inika", serif;
+  }
+  
+  .service-nav ul li a {
+    color: #54331e;
+    text-decoration: none;
+  }
+  
+  .service-nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .content {
+    text-align: center;
+  }
+  
+  .service-title {
+    font-size: 50px;
+    color: #54331e;
+    font-family: "Zen Tokyo Zoo", sans-serif;
+    margin-top: 30px;
+  }
+  
+  .intro {
+    font-size: 20px;
+    color: #54331e;
+    line-height: 1.5;
+    font-family: "Roboto", sans-serif;
+    margin-top: 50px;
+  }
+  
+  /*.Section services.*/
+  
+  .section-services {
     display: flex;
     align-items: center;
-    margin-bottom: 30px;
-}
-
-.service img {
-    max-width: 200px;
-    max-height: 200px;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  
+  .service1,
+  .service2,
+  .service3,
+  .service4,
+  .service5,
+  .service6 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  
+  .description,
+  .service {
+    margin-left: 20px;
+  }
+  
+  .service img {
+    max-width: 600px;
+    max-height: 300px;
     border-radius: 10px;
+  }
+  
+  .description {
+    width: 600px;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 10px;
+    color: white;
+    text-align: center;
+  }
+  
+  .serv-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .description p {
+    font-size: 16px;
+  }
+  
+  .serv-title,
+  .description p {
+    color: white;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  /*Animals*/
+  
+  .background-section-desert {
+    background-image: url("../../assets/desert/desert.jpg");
+  }
+  
+  .background-section-jungle {
+    background-image: url("../../assets/jungle/jungle.jpg");
+  }
+  
+  .background-section-mountain {
+    background-image: url("../../assets/montagne/montagne.jpg");
+  }
+  
+  .background-section-marais {
+    background-image: url("../../assets/marais/marais.jpg");
+  }
+  
+  .background-section-savane {
+    background-image: url("../../assets/savane/savane.jpg");
+  }
+  
+  .background-section-desert,
+  .background-section-jungle,
+  .background-section-mountain,
+  .background-section-marais,
+  .background-section-savane {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  
+  .animals-title {
+    font-size: 50px;
+    color: white;
+    font-family: "Zen Tokyo Zoo", sans-serif;
+    margin-top: 30px;
+  }
+  
+  .intro-animals {
+    font-size: 20px;
+    color: white;
+    line-height: 1.5;
+    font-family: "Roboto", sans-serif;
+    margin-top: 50px;
+  }
+  .animals-intro {
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+  
+  /* Conteneur du bouton "J'aime" */
+  .like-button-container {
+    text-align: right;
+    margin-top: 10px;
+  }
+  
+  /* Style du bouton "J'aime" */
+  button.jaime-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
     cursor: pointer;
     transition: transform 0.3s ease;
-}
-
-.service img:hover {
-    transform: scale(1.05);
-}
-
-.description p {
-    font-size: 1.1em;
-    color: #333;
-}
-.description .info {
-  background-color: #2a9d8f;
-  color: #fff;
-  border: none;
-  padding: 5px 10px;
-  margin-top: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  border-radius: 4px;
-}
-
-.description .info:hover {
-  background-color: #21867a;
-}
-.like-button-container {
-  margin-top: 15px;
-}
-
-.jaime-btn {
-  background-color: #ff6b6b;
-  color: #fff;
-  border: none;
-  padding: 10px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.jaime-btn:hover {
-  background-color: #ff4a4a;
-}
-
-.service-divider {
-  border: 1px solid #ddd;
-  margin: 20px 0;
-}
-
-/* Section de fond */
-.background-section-mountain {
-  background-image: url('../../assets/montagne/montagne.jpg'); 
-  background-size: cover;
-  padding: 20px 0;
-}
-
-/* Conteneur du service */
-.service-container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Navigation du service */
-.service-nav {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 15px;
-  border-radius: 5px;
-}
-
-.service-nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-.service-nav li {
-  margin: 10px 0;
-}
-
-.service-nav li a {
-  text-decoration: none;
-  color:#ffffff;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-.service-nav li.active a {
-  color: #d35400; 
-}
-
-/* Contenu */
-.content {
-  padding: 15px;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 5px;
-}
-
-.animals-title {
-  font-size: 2em;
-  margin-bottom: 15px;
-  text-align: center;
-  color: black; /* Couleur du titre */
-}
-
-/* Style des articles d'animaux */
-.section-services {
-  margin-top: 20px;
-}
-.service1, .service2, .service3, .service4, .service5 {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.service img {
-  width: 200px; /* Largeur de l'image */
-  height: auto; /* Hauteur auto pour maintenir le ratio */
-  border-radius: 5px;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-.service img:hover {
-  transform: scale(1.05); 
-
-.description {
-  flex: 1;
-  padding: 10px;
-}
-
-/* Style des boutons */
-button.info, .jaime-btn {
-  background-color: #3498db; 
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-button.info:hover, .jaime-btn:hover {
-  background-color: #2980b9; 
-}
-
-/* Style du séparateur */
-.service-divider {
-  border: 0;
-  border-top: 2px solid #eaeaea;
-  margin: 20px 0;
-}
-
-/* Style pour le bouton "J'aime" */
-.like-button-container {
-  margin-top: 10px;
-}
-
-/* Media queries pour la réactivité */
-@media (max-width: 768px) {
-  .service1, .service2, .service3, .service4, .service5 {
-      flex-direction: column; /* Colonne sur les écrans plus petits */
   }
-
+  
+  button.jaime-btn:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Container principal */
+  .background-section-savane {
+    background-color: #f5f5f5;
+    padding: 40px 20px;
+  }
+  
+  .service-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  /* Menu de navigation */
+  .service-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .service-nav ul li {
+    padding: 10px 0;
+    font-weight: bold;
+  }
+  
+  .service-nav ul li a {
+    color: #444;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .service-nav ul li.active a,
+  .service-nav ul li a:hover {
+      color: #2a9d8f;
+  }
+  
+  .service-nav {
+      border-right: 1px solid #ddd;
+  }
+  
+  /* Section des animaux */
+  .animals-intro {
+      padding: 20px;
+      background-color: #fafafa;
+      border-radius: 8px;
+  }
+  
+  .animals-title {
+      font-size: 2em;
+      color: #2a9d8f;
+      margin-bottom: 20px;
+  }
+  
+  .intro-animals {
+      font-size: 1.1em;
+      color: #666;
+      line-height: 1.6;
+  }
+  /* Style des cartes d'animaux */
+  .section-services .service1,
+  .section-services .service2,
+  .section-services .service3,
+  .section-services .service4,
+  .section-services .service5,
+  .section-services .service6 {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+  }
+  
   .service img {
-      width: 100%; /* Pleine largeur sur les petits écrans */
+      max-width: 200px;
+      max-height: 200px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
   }
-}
-}
+  
+  .service img:hover {
+      transform: scale(1.05);
+  }
+  
+  .description p {
+      font-size: 1.1em;
+      color: #333;
+  }
+  .description .info {
+    background-color: #2a9d8f;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+  }
+  
+  .description .info:hover {
+    background-color: #21867a;
+  }
+  .like-button-container {
+    margin-top: 15px;
+  }
+  
+  .jaime-btn {
+    background-color: #ff6b6b;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .jaime-btn:hover {
+    background-color: #ff4a4a;
+  }
+  
+  .service-divider {
+    border: 1px solid #ddd;
+    margin: 20px 0;
+  }
+  
+  /* Section de fond */
+  .background-section-mountain {
+    background-image: url('../../assets/montagne/montagne.jpg'); 
+    background-size: cover;
+    padding: 20px 0;
+  }
+  
+  /* Conteneur du service */
+  .service-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Navigation du service */
+  .service-nav {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 5px;
+  }
+  
+  .service-nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .service-nav li {
+    margin: 10px 0;
+  }
+  
+  .service-nav li a {
+    text-decoration: none;
+    color:#ffffff;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .service-nav li.active a {
+    color: #d35400; 
+  }
+  
+  /* Contenu */
+  .content {
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+  }
+  
+  .animals-title {
+    font-size: 2em;
+    margin-bottom: 15px;
+    text-align: center;
+    color: black; /* Couleur du titre */
+  }
+  
+  /* Style des articles d'animaux */
+  .section-services {
+    margin-top: 20px;
+  }
+  .service1, .service2, .service3, .service4, .service5 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .service img {
+    width: 200px; /* Largeur de l'image */
+    height: auto; /* Hauteur auto pour maintenir le ratio */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .service img:hover {
+    transform: scale(1.05); 
+  
+  .description {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  /* Style des boutons */
+  button.info, .jaime-btn {
+    background-color: #3498db; 
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button.info:hover, .jaime-btn:hover {
+    background-color: #2980b9; 
+  }
+  
+  /* Style du séparateur */
+  .service-divider {
+    border: 0;
+    border-top: 2px solid #eaeaea;
+    margin: 20px 0;
+  }
+  
+  /* Style pour le bouton "J'aime" */
+  .like-button-container {
+    margin-top: 10px;
+  }
+  
+  /* Media queries pour la réactivité */
+  @media (max-width: 768px) {
+    .service1, .service2, .service3, .service4, .service5 {
+        flex-direction: column; /* Colonne sur les écrans plus petits */
+    }
+  
+    .service img {
+        width: 100%; /* Pleine largeur sur les petits écrans */
+    }
+  }
+  }
