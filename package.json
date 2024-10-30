@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "bootstrap": "^5.3.3"
+    "mongodb": "^6.10.0"
   }
 }
