@@ -49,6 +49,11 @@ ArcadiaZoo/
 ├── README.md # Ce fichier
 ├── server.js # Serveur Node.js pour la gestion des statistiques
 └── structure.txt # Structure de la base de données
+Mise en place de l'environnement de travail :
+
+Installation de XAMPP pour la gestion d'Apache et PHP localement, simplifiant ainsi les tests et le débogage avant le déploiement.
+Configuration Mysql Apache
+XAMPP a été utilisé pour sa simplicité d'installation et sa capacité à fournir un environnement de développement complet
 
 ## Backend
 
@@ -58,9 +63,7 @@ La base de données relationnelle MySQL est utilisée pour stocker et gérer les
 
 Table admin : Contient les informations des utilisateurs (administrateurs, employés, vétérinaires).
 
-Table animals : Contient les informations sur les animaux.
-
-Table consommation : Stocke les données de consommation alimentaire des animaux.
+Table animal : Contient les informations sur les animaux.
 
 Table contact : Stocke les informations de contact.
 
@@ -68,16 +71,17 @@ Table employee : Stocke les informations des employés.
 
 Table food : Stocke les informations sur la nourriture disponible.
 
-Table health : Stocke les informations sur la santé des animaux.
+Table soins: Stocke les informations sur la santé des animaux.
 
-Table review : Stocke les avis des visiteurs.
+Table avis: Stocke les avis des visiteurs.
 
 Table services : Stocke les informations sur les services proposés par le zoo.
 
-Table services : Détaille les services offerts par le zoo.
+Table veterinaire : Contient les informations veterinaire sur la santé des animaux.
 
 ## MongoDB
 
+Installation et configuration de MongoDB pour gérer efficacement les données sous forme de documents JSON, répondant aux besoins de flexibilité et de scalabilité du projet.
 La base de données non relationnelle MongoDB est utilisée pour les statistiques de consultation des animaux :
 
 Collection animalviews : Enregistre les comptages de "J'aime" pour chaque animal.
