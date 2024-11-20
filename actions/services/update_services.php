@@ -1,9 +1,9 @@
 <?php
 session_start();
-include '../../config/conneion_bdd.php'; // Connexion à la base de données
+include '../../config/database.php'; // Connexion à la base de données
 
 if (!isset($_SESSION['user']) || ($_SESSION['user']['role'] !== 'employee' && $_SESSION['user']['role'] !== 'admin')) {
-    header("Location: ../../index.php");
+    header("Location: ./../../../index.php");
     exit();
 }
 
@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 ]);
 
                 // Redirige après la mise à jour
-                header("Location: ../../../../public/employee.php");
+                header("Location: ../../../..//public/employee.php");
                 exit();
             } else {
                 echo "Nom et description sont requis pour la mise à jour.";

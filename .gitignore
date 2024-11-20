@@ -1,4 +1,9 @@
-/node_modules/
+
 /views/
 /vscode/
 /upload.php/
+/node_modules/
+playground-2.mongodb.json
+/settings.json/
+/phpinfo.php/
+

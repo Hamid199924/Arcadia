@@ -1,4 +1,4 @@
-<?php include '../../tamplate/header.php'; ?>
+<?php include '../../template/header.php'; ?>
 
 <div class="confirmation-message">
     <h1>Merci !</h1>
@@ -6,4 +6,4 @@
     <a href="../../public/Formulaire.php">Retour au formulaire</a>
 </div>
 
-<?php include '../../tamplate/footer.php'; ?>
+<?php include '../../template/footer.php'; ?>

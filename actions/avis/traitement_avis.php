@@ -5,7 +5,7 @@ header('Content-Type: application/json');
 // Vérifie si le formulaire a été soumis
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Inclut le fichier de connexion à la base de données
-    include_once "../../config/conneion_bdd.php";
+    include_once "../../config/database.php";
 
     // Récupère et assainit les données soumises depuis le formulaire
     $pseudo = trim(htmlspecialchars($_POST['pseudo'], ENT_QUOTES, 'UTF-8'));

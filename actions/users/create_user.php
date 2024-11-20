@@ -1,10 +1,10 @@
 <?php
 session_start();
-include '../../config/conneion_bdd.php';
+include '../../config/database.php';
 
 // Vérifie si l'utilisateur est un admin
 if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'admin') {
-    header("Location: ../../../../tamplate/header.php");
+    header("Location: ../../../../template/header.php");
     exit();
 }
 

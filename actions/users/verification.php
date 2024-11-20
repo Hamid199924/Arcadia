@@ -2,7 +2,7 @@
 session_start();
 
 // Inclu le fichier de connexion à la base de données
-include_once "../../config/conneion_bdd.php";
+require_once"../../config/database.php";
 
 // Vérification des identifiants
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -23,12 +23,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Redirige vers le tableau de bord approprié en fonction du rôle
         if ($role === 'admin') {
-            header("Location: ../../../../public/dashborad.php");
+            header("Location: ../../../../public/admin.php");
             exit();
         } elseif ($role === 'employee') {
             header("Location: ../../../../public/employee.php");
             exit();
-        } elseif ($role === 'veterinarian') {
+        } elseif ($role === 'veterinaire') {
             header("Location: ../../../../public/veterinaire.php");
             exit();
         }

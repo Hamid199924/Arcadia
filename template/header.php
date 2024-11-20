@@ -13,36 +13,53 @@
 </head>
 <body>
 
+<div class="login-container">
+        <!-- Lien vers la page Admin, mais qui ne redirige pas encore -->
+        <a href="../public/admin.php" class="admin-link">Admin</a>
+
+        <div class="login-form">
+            <form action="../../actions/verification.php" method="POST" id="login-form">
+                <div class="form-group">
+                    <label for="username">Nom d'utilisateur :</label>
+                    <input type="text" id="username" name="username" placeholder="Nom d'utilisateur" required />
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Mot de passe :</label>
+                    <input type="password" id="password" name="password" placeholder="Mot de passe" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="role">Rôle :</label>
+                    <select name="role" id="role" required>
+                        <option value="admin">Admin</option>
+                        <option value="employee">Employé</option>
+                        <option value="veterinarian">Vétérinaire</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary submit-btn">Se connecter</button>
+            </form>
+        </div>
+    </div>
+
 <header>
   <div class="background-image"></div>
   <div class="header-container">
     <!-- Logo section -->
     <div class="logo">
-      <img src=".././assets/logo/Arcadia-logo.png" alt="Arcadia Logo" />
+      <img src="../assets/logo/Arcadia-logo.png" alt="Arcadia Logo" />
     </div>
 
-    <!-- Dynamic Navigation Menu -->
-    <?php
-    // Liste des pages avec leurs titres et chemins
-    $navItems = [
-        'index.php' => ['ACCUEIL', '../../index.php'],
-        'desert.php' => ['Animaux & Habitats', '../../public/desert.php'],
-        'services.php' => ['SERVICES', '../../public/services.php'],
-        'formulaire.php' => ['CONTACT', '../../public/formulaire.php'],
-        'connexion.php' => ['CONNEXION', '../../public/connexion.php']
-       ];
+  <!-- Dynamic Navigation Menu -->
+<nav class="header-nav">
+    <ul>
+        <li class="<?= basename($_SERVER['PHP_SELF']) == 'index.php' ? 'active' : '' ?>"><a href="../index.php">ACCUEIL</a></li>
+        <li class="<?= basename($_SERVER['PHP_SELF']) == 'desert.php' ? 'active' : '' ?>"><a href="../public/desert.php">Animaux et Habitats</a></li>
+        <li class="<?= basename($_SERVER['PHP_SELF']) == 'services.php' ? 'active' : '' ?>"><a href="../public/services.php">SERVICES</a></li>
+        <li class="<?= basename($_SERVER['PHP_SELF']) == 'formulaire.php' ? 'active' : '' ?>"><a href="../public/Formulaire.php">CONTACT</a></li>
+    </ul>
+</nav>
 
-    // Obtenir la page en cours
-    $current_page = basename($_SERVER['PHP_SELF']);
-    ?>
-    <nav class="header-nav">
-      <ul>
-        <?php foreach ($navItems as $page => $info): ?>
-          <li class="<?= ($current_page == $page) ? 'active' : ''; ?>">
-            <a href="<?= $info[1]; ?>"><?= $info[0]; ?></a>
-          </li>
-        <?php endforeach; ?>
-      </ul>
-    </nav>
   </div>
 </header>

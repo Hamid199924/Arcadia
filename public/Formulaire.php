@@ -1,11 +1,11 @@
 <?php 
-require_once ('../public/Formulaire.php');
+require_once ('../template/header.php');
 ?>
-<link rel="stylesheet" href="../assets/css/index.css" />
+<link rel="stylesheet" href="..//assets/css/index.css" />
 <div class="screen">
     <h6 class="title-form">Contactez nous</h6>
     <div class="Formulaire">
-       <form action="../actions/message/traitement_contact.php" method="POST">
+       <form action=".././actions/message/traitement_contact.php" method="POST">
   <div class="form-group">
       <label for="email" class="form-label">Email</label>
       <input

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../../config/conneion_bdd.php';
+include '../../config/database.php';
 
 if (isset($_POST['contact_id'])) {
     $contact_id = $_POST['contact_id'];

@@ -1,14 +1,14 @@
 <?php
  // Inclure le fichier de connexion à la base de données
-include_once "config/database.php";
-
-
+require_once "./config/database.php";
 
  //Sélectionne les avis validés
-include './template/header.php';
+$query = $pdo->prepare("SELECT * FROM avis");
+$query->execute();
+require_once './template/header.php';
 
 ?>
-
+<link rel="stylesheet" href="./assets/css/index.css" />
 <div class="background-section">
   <div class="container">
     <div class="row">
@@ -91,7 +91,7 @@ include './template/header.php';
       <div class="col-lg-4">
         <div class="rectangle">
           <img
-            src="./assets/marais/crocodilenil.jpg"
+            src="././assets/marais/crocodilenil.jpg"
             alt="Image 2"
             class="image img-fluid"
           />
@@ -149,6 +149,6 @@ include './template/header.php';
     </div>
   </div>
      
-  <?php include './template/footer.php'; ?>
+  <?php require_once './template/footer.php'; ?>
 
 

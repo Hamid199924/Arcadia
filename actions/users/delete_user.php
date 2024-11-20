@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../../config/conneion_bdd.php';
+include '../../config/database.php';
 
 // Vérifie si l'utilisateur est un administrateur
 if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'admin') {
@@ -29,6 +29,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header("Location: ../../../../public/dashborad.php?message=Compte supprimé avec succès");
     } else {
         echo "<script>alert('Erreur lors de la suppression du compte.');</script>";
-        header("Location: ../../public/admin_dashboard.php?message=Erreur lors de la suppression du compte");
+        header("location: ../../../../public/dashborad.php?message=Erreur lors de la suppression du compte");
     }
 }

@@ -1,59 +1,43 @@
 <?php 
-include '../template/header.php';
-include '../config/database.php'; // Connexion à la base de données avec PDO
-
+require_once '../template/header.php';
+require_once '../config/database.php'; // Connexion à la base de données avec PDO
+// Connexion à la base de données
 try {
-    $pdo = new PDO('mysql:host=localhost;dbname=arcadia;charset=utf8', 'root', '');
+    $pdo = new PDO('mysql:host=localhost;dbname=Arcadia', 'root', '');
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    //die('Erreur de connexion : ' . $e->getMessage());
+
+    // Requête SQL pour récupérer les informations des animaux
+    $sql = "SELECT * FROM animal WHERE etat_animal = :etat_animal";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([':etat_animal' => 'valeur_cherchee']);
+    $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    foreach ($results as $row) {
+        // Traiter les résultats ici
+    }
+
 } catch (PDOException $e) {
-    echo "Erreur de connexion : " . $e->getMessage();
+    echo 'Erreur : ' . $e->getMessage();
+    exit();
 }
-
-// Préparer et exécuter la requête
-$query = $pdo->prepare("SELECT * FROM animal WHERE habitat = :habitat");
-$query->execute(['habitat' => 'Montagne']);
-$animals = $query->fetchAll(PDO::FETCH_ASSOC);
-
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
   <link rel="stylesheet" href="../assets/css/index.css"> 
-</head>
-<body>
-  
 
 <div class="background-section-mountain">
     <div class="container service-container">
       <div class="row">
-        <nav class="col-md-3 service-nav"> 
-        <ul>
-    <?php
-    // Tableau associatif pour les pages et leurs noms
-    $pages = [
-        'desert.php' => 'Désert',
-        'jungle.php' => 'Jungle',
-        'mountain.php' => 'Montagne',
-        'marais.php' => 'Marais',
-        'savane.php' => 'Savane'
-    ];
-    
-    // Récupération de la page actuelle
-    $current_page = basename($_SERVER['PHP_SELF']);
-    
-    // Boucle pour générer le menu
-    foreach ($pages as $file => $name): ?>
-        <li class="<?= $current_page === $file ? 'active' : '' ?>">
-            <a href="<?= $file ?>"><?= htmlspecialchars($name) ?></a>
-        </li>
-    <?php endforeach; ?>
-</ul>
+      <nav class="col-md-3 service-nav">
 
-        </nav>
+           <!-- Menu de navigation dynamique -->
+          <ul>
+            <li class="<?= basename($_SERVER['PHP_SELF']) == 'desert.php' ? 'active' : '' ?>"><a href="desert.php">Désert</a></li>
+            <li class="<?= basename($_SERVER['PHP_SELF']) == 'jungle.php' ? 'active' : '' ?>"><a href="jungle.php">Jungle</a></li>
+            <li class="<?= basename($_SERVER['PHP_SELF']) == 'mountain.php' ? 'active' : '' ?>"><a href="mountain.php">Montagne</a></li>
+            <li class="<?= basename($_SERVER['PHP_SELF']) == 'marais.php' ? 'active' : '' ?>"><a href="marais.php">Marais</a></li>
+            <li class="<?= basename($_SERVER['PHP_SELF']) == 'savane.php' ? 'active' : '' ?>"><a href="savane.php">Savane</a></li>
+          </ul>
+    </nav>
         <div class="col-md-9 content animals-intro">
           <h1 class="animals-title">Montagne</h1>
           <p class="intro-animals">
@@ -196,6 +180,5 @@ $animals = $query->fetchAll(PDO::FETCH_ASSOC);
       </div>
     </section>
   
-  <?php include '../template/footer.php'; ?>
-  </body>
-</html>
+  <?php require_once '../template/footer.php'; ?>
+  

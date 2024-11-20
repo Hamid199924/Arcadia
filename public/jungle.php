@@ -1,13 +1,13 @@
 <?php
 require_once '../config/database.php'; // Connexion à la base de données
-require_once '../template/header.php';
+require_once '../template/header.php'; // Inclusion du header
 
 
 try {
   $pdo = new PDO('mysql:host=localhost;dbname=arcadia;charset=utf8', 'root', '');
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
-  echo "Erreur de connexion : " . $e->getMessage();
+  die("Erreur de connexion : " . $e->getMessage());
 
 
   $query->execute();
@@ -26,35 +26,20 @@ if ($animalsByName) {
 }
 }
 ?>
-
 <link rel="stylesheet" href="../assets/css/index.css">
 <div class="background-section-jungle">
     <div class="container service-container">
       <div class="row">
  <nav class="col-md-3 service-nav"> 
+    <!-- Menu de navigation statique -->
     <ul>
-        <?php 
-            // Tableau associatif des pages et leurs noms affichés
-            $pages = [
-                'desert.php' => 'Désert',
-                'jungle.php' => 'Jungle',
-                'mountain.php' => 'Montagne',
-                'marais.php' => 'Marais',
-                'savane.php' => 'Savane'
-            ];
-            
-            // Page actuelle
-            $currentPage = basename($_SERVER['PHP_SELF']);
-            
-            // Boucle pour générer les éléments de navigation
-            foreach ($pages as $file => $title) {
-                $isActive = ($currentPage === $file) ? 'class="active"' : '';
-                echo "<li $isActive><a href=\"$file\">$title</a></li>";
-            }
-        ?>
+      <li class="<?= basename($_SERVER['PHP_SELF']) == 'desert.php' ? 'active' : '' ?>"><a href="desert.php">Désert</a></li>
+      <li class="<?= basename($_SERVER['PHP_SELF']) == 'jungle.php' ? 'active' : '' ?>"><a href="jungle.php">Jungle</a></li>
+      <li class="<?= basename($_SERVER['PHP_SELF']) == 'mountain.php' ? 'active' : '' ?>"><a href="mountain.php">Montagne</a></li>
+      <li class="<?= basename($_SERVER['PHP_SELF']) == 'marais.php' ? 'active' : '' ?>"><a href="marais.php">Marais</a></li>
+      <li class="<?= basename($_SERVER['PHP_SELF']) == 'savane.php' ? 'active' : '' ?>"><a href="savane.php">Savane</a></li>
     </ul>
  </nav>
-
         <div class="col-md-9 content animals-intro">
           <h1 class="animals-title">Jungle</h1>
           <p class="intro-animals">

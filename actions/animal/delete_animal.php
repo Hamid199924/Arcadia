@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../../config/connexion_bd.php'; // Connexion à la base de données
+require_once '../../config/database.php'; // Connexion à la base de données
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Récupére l'ID de l'animal à supprimer

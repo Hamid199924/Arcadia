@@ -1,19 +1,19 @@
 <?php 
-include '../template/header.php';
-include '../config/database.php'; // Connexion à la base de données avec PDO
+require_once '../template/header.php';
+require_once '../config/database.php'; // Connexion à la base de données avec PDO
 
 
 try {
     $pdo = new PDO("mysql:host=localhost;dbname=Arcadia", "root", "");
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    //die('Erreur de connexion : ' . $e->getMessage());
 
-    // Exemple de requête SQL avec un paramètre (nom d'animal ou prénom)
-    $sql = "SELECT * FROM animal WHERE prenom IN (:names)"; // Modifie cette requête en fonction de ta base de données
-
+    // Requête pour récupérer les animaux de la savane
+    $sql = "SELECT * FROM animal WHERE prenom IN (:names)"; 
     $query = $pdo->prepare($sql);
 
-    // Si $animalNames est un tableau, transforme-le en une chaîne de noms pour la requête
-    $animalNames = ['Léo', 'Tigrou']; // Exemple de tableau de prénoms
+    // Exécute la requête avec les noms d'animaux
+    $animalNames = ['Léo', 'Tigris', 'Tembo', 'Jasiri', 'Kito', 'Raja', 'Simba', 'RhinoFamily', 'Zuri']; 
     $namesParam = implode(",", array_fill(0, count($animalNames), "?"));
     $sql = "SELECT * FROM animal WHERE prenom IN ($namesParam)";
     $query = $pdo->prepare($sql);
@@ -39,44 +39,28 @@ try {
 }
 
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link  rel="stylesheet" href="../assets/css/index.css">
-</head>
-<body>
-  
+<link rel="stylesheet" href="../assets/css/index.css">
+
 <div class="background-section-savane">
     <div class="container service-container">
         <div class="row">
             <nav class="col-md-3 service-nav"> 
-                <?php
-                // Tableau associatif pour les pages et leurs noms
-                $pages = [
-                    'desert.php' => 'Désert',
-                    'jungle.php' => 'Jungle',
-                    'mountain.php' => 'Montagne',
-                    'marais.php' => 'Marais',
-                    'savane.php' => 'Savane'
-                ];
-                $current_page = basename($_SERVER['PHP_SELF']);
-                ?>
+                <!-- Menu de navigation dynamique -->
                 <ul>
-                    <?php foreach ($pages as $file => $name): ?>
-                        <li class="<?= $current_page === $file ? 'active' : '' ?>">
-                            <a href="<?= $file ?>"><?= $name ?></a>
-                        </li>
-                    <?php endforeach; ?>
+                    <li class="<?= basename($_SERVER['PHP_SELF']) == 'desert.php' ? 'active' : '' ?>"><a href="desert.php">Désert</a></li>
+                    <li class="<?= basename($_SERVER['PHP_SELF']) == 'jungle.php' ? 'active' : '' ?>"><a href="jungle.php">Jungle</a></li>
+                    <li class="<?= basename($_SERVER['PHP_SELF']) == 'mountain.php' ? 'active' : '' ?>"><a href="mountain.php">Montagne</a></li>
+                    <li class="<?= basename($_SERVER['PHP_SELF']) == 'marais.php' ? 'active' : '' ?>"><a href="marais.php">Marais</a></li>
+                    <li class="<?= basename($_SERVER['PHP_SELF']) == 'savane.php' ? 'active' : '' ?>"><a href="savane.php">Savane</a></li>
                 </ul>
-            </nav>
-            <div class="col-md-9 content animals-intro">
+             </nav>
+              <div class="col-md-9 content animals-intro">
                 <h1 class="animals-title">Savane</h1>
                 <p class="intro-animals">
-                    Bienvenue dans la Savane, un vaste horizon de beauté naturelle au cœur de notre zoo. Découvrez cet habitat emblématique où l'éléphant d'Afrique, la girafe, le guépard, le lion, le rhinocéros et le zèbre évoluent en harmonie.<br><br>
-                    Parcourez ces étendues sauvages où chaque pas révèle la majesté de la vie animale. Plongez dans ce monde fascinant où chaque créature incarne la splendeur de la vie sauvage de la Savane.
+                    Bienvenue dans la Savane, un vaste horizon de beauté naturelle au cœur de notre zoo. Découvrez cet habitat 
+                    emblématique où l'éléphant d'Afrique, la girafe, le guépard, le lion, le rhinocéros et le zèbre évoluent en harmonie.<br><br>
+                    Parcourez ces étendues sauvages où chaque pas révèle la majesté de la vie animale. 
+                    Plongez dans ce monde fascinant où chaque créature incarne la splendeur de la vie sauvage de la Savane.
                 </p>
             </div>
         </div>
@@ -184,7 +168,7 @@ try {
       <!-- Animal 5: Simba - Lion -->
       <div class="service4">
         <article class="service">
-          <img src=".././assets/savane/zèbre.jpg" onclick="agrandirImage(this)" />
+          <img src=".././assets/savane/savannah-lion.jpg" onclick="agrandirImage(this)" />
         </article>
         <article class="description">
   <p>
@@ -267,5 +251,4 @@ try {
   <?php
   require_once '../template/footer.php';
   ?>
-  </body>
-  </html>
+  

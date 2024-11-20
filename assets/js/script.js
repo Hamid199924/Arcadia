@@ -22,17 +22,20 @@ window.addEventListener("resize", hideVerticalNavbarOnDesktop);
 document.addEventListener("DOMContentLoaded", hideVerticalNavbarOnDesktop);
 
 // Fonction pour basculer le formulaire de connexion admin
-function toggleAdminLoginForm() {
-  const isFormVisible = loginForm.style.display === "block";
-  loginForm.style.display = isFormVisible ? "none" : "block";
-}
+document.getElementById('login-from').addEventListener('submit',function(event) {
+const username = document.getElementById('username').value;
+const password = document.getElementById('password').value;
+const role = document.getElementById('role').value;
 
-adminLink?.addEventListener("click", (event) => {
+// Ajouter ici toute validation supplémentaire
+if (!username || !password || !role) {
+  alert('Veuillez remplir tous les champs');
   event.preventDefault();
-  toggleAdminLoginForm();
+}
 });
 
-// Liste des chemins d'accès des images
+// Gestion de l'affichage de la barre de navigation verticale
+
 const imagePaths = [
   "public/assets/jungle/tigre.jpg",
   "public/assets/savane/elephant.jpg",
