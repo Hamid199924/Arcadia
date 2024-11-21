@@ -54,10 +54,10 @@
   <!-- Dynamic Navigation Menu -->
 <nav class="header-nav">
     <ul>
-        <li class="<?= basename($_SERVER['PHP_SELF']) == 'index.php' ? 'active' : '' ?>"><a href="../index.php">ACCUEIL</a></li>
-        <li class="<?= basename($_SERVER['PHP_SELF']) == 'desert.php' ? 'active' : '' ?>"><a href="../public/desert.php">Animaux et Habitats</a></li>
-        <li class="<?= basename($_SERVER['PHP_SELF']) == 'services.php' ? 'active' : '' ?>"><a href="../public/services.php">SERVICES</a></li>
-        <li class="<?= basename($_SERVER['PHP_SELF']) == 'formulaire.php' ? 'active' : '' ?>"><a href="../public/Formulaire.php">CONTACT</a></li>
+        <li class="<?= basename($_SERVER['PHP_SELF']) == 'index.php' ? 'active' : '' ?>"><a href="././index.php">ACCUEIL</a></li>
+        <li class="<?= basename($_SERVER['PHP_SELF']) == 'desert.php' ? 'active' : '' ?>"><a href="././public/desert.php">Nos Habitats</a></li>
+        <li class="<?= basename($_SERVER['PHP_SELF']) == 'services.php' ? 'active' : '' ?>"><a href="././public/services.php">SERVICES</a></li>
+        <li class="<?= basename($_SERVER['PHP_SELF']) == 'formulaire.php' ? 'active' : '' ?>"><a href="././public/Formulaire.php">CONTACT</a></li>
     </ul>
 </nav>
 

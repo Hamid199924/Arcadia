@@ -20,11 +20,11 @@
         <div class="col-md-12 text-center">
           <h5 class="footer-title">Suivez nous</h5>
           <div class="social-icons">
-            <a href="#"><img src="./assets/logo/facebook.png" alt="Facebook" class="social-icon"></a>
-            <a href="#"><img src="./assets/logo/instagram.png" alt="Instagram" class="social-icon"></a>
-            <a href="#"><img src="./assets/logo/x.jpg" alt="x" class="social-icon"></a>
-            <a href="#"><img src="./assets/logo/tiktok.png" alt="tiktok" class="social-icon"></a>
-            <a href="#"><img src="./assets/logo/tripadvisor.png" alt="Tripadvisor" class="social-icon"></a>
+            <a href="#"><img src="../assets/logo/facebook.png" alt="Facebook" class="social-icon"></a>
+            <a href="#"><img src="../assets/logo/instagram.png" alt="Instagram" class="social-icon"></a>
+            <a href="#"><img src="../assets/logo/x.jpg" alt="x" class="social-icon"></a>
+            <a href="#"><img src="../assets/logo/tiktok.png" alt="tiktok" class="social-icon"></a>
+            <a href="#"><img src="../assets/logo/tripadvisor.png" alt="Tripadvisor" class="social-icon"></a>
           </div>
         </div>
 
@@ -35,14 +35,14 @@
         <div class="col-6 col-lg-4 text-end">
           <h5 class="footer-title">Pratique</h5>
           <ul class="list-unstyled custom-list">
-            <li><a href="../public/services.php.php#time" class="link-secondary">VENIR AU PARC</a></li>
-            <li><a href="../public/services.php.php#ticket" class="link-secondary">BILLETTERIE</a></li>
-            <li><a href="../public/Formulaire.php" class="link-secondary">CONTACT</a></li>
+            <li><a href="././public/services.php.php#time" class="link-secondary">VENIR AU PARC</a></li>
+            <li><a href="././public/services.php.php#ticket" class="link-secondary">BILLETTERIE</a></li>
+            <li><a href="././public/Formulaire.php" class="link-secondary">CONTACT</a></li>
           </ul>
         </div>
     </div>
 </footer>
 
-<script src=".././assets/js/script.js"></script>
+<script src="././assets/js/script.js"></script>
 </body>
 </html>
