@@ -1,5 +1,5 @@
 <?php
-include_once "../../../config/database.php";
+include_once "../../config/database.php";
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $id = intval($_POST['id']);
@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $stmt->execute([':id' => $id]);
 
     // Redirige après l'action
-    header("Location: ../../../../../public/employee.php");
+    header("Location: ../../../../public/employee.php");
     exit();
 }
 ?>

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../../../config/database.php';
+include '../../config/database.php';
 
 if (isset($_POST['contact_id'])) {
     $contact_id = $_POST['contact_id'];
@@ -9,6 +9,6 @@ if (isset($_POST['contact_id'])) {
     $stmt->execute([$contact_id]);
 }
 
-header("Location: ../../../../../public/employee.php");
+header("Location: ../../../../public/employee.php");
 exit();
 ?>
